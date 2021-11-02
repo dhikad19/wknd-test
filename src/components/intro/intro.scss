@@ -1,0 +1,142 @@
+@import "../../global.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.intro {
+  height: 100%;
+  background-color: var(--first-color);
+  background-image: url("../../assets/oval.svg"), url("../../assets/pattern.svg"),
+                    url("../../assets/bg1.svg"), url("../../assets/circle.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom -200px right -250px, top -70px left, center top -150px, left -170px top -140px;
+  
+  @include mobile{
+    flex-direction: column;
+    align-items: center;
+    background-position: bottom -500px right -250px, top -70px left -300px, center top 80px, left -550px top -140px;
+  }
+
+  .bg-container{
+    position: relative;
+    overflow: hidden;
+    justify-content: center;
+
+    .bg1 {
+      position: relative;
+      background-size: auto;
+    }
+  }
+
+  .center {
+    overflow: hidden;
+    .img-container {
+        position:absolute;
+        max-width:45%;
+        max-height:45%;
+        top:53%;
+        left:50%;
+        overflow:visible;
+
+      .lego-bg {
+        position: relative;
+        width: 184px;
+        height: 305px;
+        margin-top: -50%;
+        margin-left:-50%;
+        }
+      }
+    }
+  }
+  .right {
+    position: relative;
+
+    .wrapper {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-top: 5%;
+
+      @include mobile{
+        padding-left: 0;
+        align-items: center;
+      }
+
+      h1 {
+        font-size: 62px;
+        color: var(--second-color);
+        font-weight: 900;
+        text-align: center;
+
+        @include mobile{
+          font-size: 40px;
+          font-weight: 700;
+        }
+      }
+
+      h3 {
+        font-size: 21px;
+        text-align: center;
+        color: var(--second-color);
+        font-style: italic;
+        font-weight: 600;
+
+        @include mobile{
+          font-size: 19px;
+        }
+
+        span {
+          font-size: inherit;
+          color: var(--second-color);
+        }
+
+        .ityped-cursor {
+          animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            50%{
+                opacity: 1;
+            }
+            100%{
+                opacity: 0;
+            }
+        }
+      }
+    }
+    .btn-container {
+      display: block;
+      text-align: center;
+      margin-top: auto;
+
+      button {
+        border-radius: 29px;
+        width: 231px;
+        height: 58px;
+        border: none;
+        font-size: 20px;
+        color: var(--first-color);
+        font-weight: 400;
+        cursor: pointer;
+        margin-top: 15%;
+        margin-left: -20px;
+
+        @include mobile{
+          margin-top: 70%;
+          margin-left: auto;
+        }
+      }
+
+      button:hover{
+        color: var(--first-color);
+        background-color: var(--fourth-color);
+      }
+    }
+}
+
+

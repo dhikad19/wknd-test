@@ -1,0 +1,88 @@
+@import "../../global.scss";
+
+.img-container-botom {
+  position:absolute;
+  max-width:45%;
+  max-height:45%;
+  top:53%;
+  left:50%;
+  overflow:visible;
+
+.lego-bg-botom {
+  position: relative;
+  transform: matrix(1, 0, 0, -1, 0, 0);
+  width: 137px;
+  height: 227px;
+  margin-top: -50%;
+  margin-left: -480%;
+
+  @include mobile{
+  margin-left: -120%;
+    }
+  }
+}
+
+.footer-desc{
+  background-image: url("../../assets/oval.svg");
+  background-position: bottom -400px left -1200px;
+  background-repeat: no-repeat;
+  background-size: 2000px;
+  background-repeat: no-repeat;
+  height: 100%;
+  position: relative;
+
+  .footer {
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    height: 67px;
+    background-color: var(--third-color);
+  
+    @include mobile {
+      margin-top: 80px;
+    }
+  
+    .footer-text{
+      margin-top: 23px;
+      margin-left: 200px;
+      color: var(--second-color);
+      span{
+        font-weight: bold;
+      }
+      margin-left: 200px;
+      @include mobile {
+        margin-left: 30px;
+      }
+        margin-left: 30px;
+      
+    }
+  }
+  
+  .footer-set-content {
+    margin-top: 5%;
+    font-size: 18px;
+    text-align: center;
+    color: var(--second-color);
+    font-weight: 100;
+  
+    @include mobile{
+      margin-left: 15px;
+      text-align: left;
+      font-size: 18px;
+    }
+  }
+}
+
+.footer-set {
+  margin-top: 8%;
+  font-size: 32px;
+  color: var(--second-color);
+  text-align: center;
+  font-weight: bold;
+
+  @include mobile{
+    margin-left: 15px;
+    text-align: left;
+    font-size: 30px;
+  }
+}

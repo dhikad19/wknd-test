@@ -1,0 +1,151 @@
+@import "../../global.scss";
+
+.cards-container {
+  height: 100%;
+  background-image: url("../../assets/oval1.svg");
+  background-position: top 30px right -120px;
+  background-repeat: no-repeat;
+  background-size: 600px;
+  background-color: var(--first-color);
+  position: relative;
+
+  @include mobile {
+    height: auto;
+    font-weight: auto;
+  }
+
+.heading__title {
+  text-align: center;
+  margin-left: -25px;
+  margin-top: 10%;
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--second-color);
+
+  @include mobile {
+    margin-top: 30px;
+    margin-left: 20px;
+    text-align: left;
+    font-size: 29px;
+  }
+}
+
+.cards {
+  margin-top: 5%;
+  margin-left: -25px;
+  display: flex; 
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .card-text-right{
+    margin-right: 30px;
+    margin-top: 120px;
+
+    @include mobile{
+      margin-right: 20px;
+      margin-top: 75px;
+    }
+    
+    .arrow-logo{
+      overflow: hidden;
+      cursor: pointer;
+      position: absolute;
+      height: 35px;
+      width: 35px;
+      margin-left: 260px;
+      margin-top: -5px;
+      transition: all 0.2s;
+
+      @include mobile {
+        height: 25px;
+        width: 25px;
+        margin-left: 210px;
+      }
+    }
+  
+    .arrow-logo:hover{
+      transform: scale(1.10);
+    }
+  }
+
+  .card-text{
+    margin-top: 100px;
+    width: 250px;
+    height: 80px;
+
+  @include mobile{
+    padding: 5px;
+    margin-left: -15px;
+    width: 250px;
+    margin-top: 75px;
+    height: 18px;
+  }
+  }
+}
+
+.card {
+  margin: 10px;
+  height: 180px;
+  width: 300px;
+  display: grid;
+  grid-template-rows: 20px 50px 1fr 50px;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+  transition: all 0.2s;
+
+  @include mobile {
+  margin: 10px;
+  height: 120px;
+  width: 250px;
+  }
+}
+
+.card:hover {
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+  transform: scale(1.01);
+
+  @include mobile {
+    transform: none;
+  }
+}
+
+.card__link:hover::after {
+  width: 100%;
+}
+
+.card__title {
+  margin-top: 31px;
+  margin-left: 25px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--second-color);
+
+  @include mobile{
+    margin-left: 10px;
+    margin-top: -4px;
+    font-size: 13px;
+  }
+
+}
+
+.card-1 {
+  background-image: url(https://wknd-take-home-challenge-api.herokuapp.com/dbh6fghjgj.jpg);
+  background-size: cover;
+}
+
+.card-2 {
+  background-image: url(https://wknd-take-home-challenge-api.herokuapp.com/lgmd6ielxi.jpg);
+  background-size: cover;
+}
+
+.card-3 {
+  background-image: url(https://wknd-take-home-challenge-api.herokuapp.com/qlrl8c8xqg.jpg);
+  background-size: cover;
+}
+
+@media (max-width: 1600px) {
+  .cards {
+    margin-left: 5px;
+    justify-content: center;
+  }
+}
+}
